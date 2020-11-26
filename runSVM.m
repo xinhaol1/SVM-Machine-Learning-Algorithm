@@ -16,7 +16,7 @@ class2_num = N;
 features = data(:, 1:3);
 classifications = data(:, 4);
 c = 0.1;
-[z, e] = quadproglxh(features, classifications, c, feature_num, feature_dim);
+[z, e] = SVM(features, classifications, c, feature_num, feature_dim);
 
 scatter3(data(1:class1_num, 1), data(1:class1_num, 2), data(1:class1_num, 3), 'ob');
 hold on
